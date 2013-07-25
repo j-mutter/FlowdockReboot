@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+killall Flowdock
+sleep 1
+open -g /Applications/Flowdock.app

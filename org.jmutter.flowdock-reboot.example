@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.jmutter.flowdock-reboot</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>FLOWDOCK_REBOOT</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>INTERVAL</integer>
+</dict>
+</plist>
