@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-killall Flowdock
-sleep 1
-open -g /Applications/Flowdock.app
+
+count=`ps -xc -o command | egrep -c "^Flowdock"`
+if [ $count -gt 0 ]; then
+    killall Flowdock
+    sleep 1
+    open -g /Applications/Flowdock.app
+fi
+
