@@ -2,8 +2,11 @@
 
 count=`ps -xc -o command | egrep -c "^Flowdock"`
 if [ $count -gt 0 ]; then
-    killall Flowdock
-    sleep 1
-    open -g /Applications/Flowdock.app
+  if [[ `osascript /usr/local/bin/activeWindow.scpt` != *Flowdock* ]]
+    then
+      killall Flowdock
+      sleep 1
+      open -g /Applications/Flowdock.app
+  fi
 fi
 
