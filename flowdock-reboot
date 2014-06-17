@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 count=`ps -xc -o command | egrep -c "^Flowdock"`
-if [ $count -gt 0 ]; then
+frontmostapp=`osascript -e 'tell application "System Events" to get first application process whose frontmost is true' | awk -F " " '{print $3}'`
+if [[ $count -gt 0 && $frontmostapp != *Flowdock* ]]; then
     killall Flowdock
     sleep 1
     open -g /Applications/Flowdock.app
